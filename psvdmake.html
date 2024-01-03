@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <style>
+     
+
+        img{
+            margin-top: 300px;
+            margin: auto;
+            width: 100%;
+            height: 150px;
+            z-index: 0;
+        }
+
+        h2{
+            margin-top: -148px;
+            margin-left: 101px;
+            font-weight: 900;
+            display: flex;
+            z-index: 1;
+        }
+        #slogan{
+            font-size: 10px;
+            margin-top: -10px;
+            margin-left: 100px;
+        }
+
+        .containor{
+            width: 100%;
+            margin-top: 10px;
+            position: absolute;
+            padding-top: 50px;
+            background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0) -30px , rgb(255, 255, 255) 90px);
+        }
+
+        #login{
+            margin: auto;
+            width: 100px;
+            font-size: 25PX;
+            padding: 10px;
+            padding-bottom: 10px;
+            color: black;
+            background-color: gold;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px -4px 5px  rgb(54, 54, 54);
+        }
+
+        .input{
+            width: 80%;
+            margin-left:10%;
+            border-bottom: 3px solid blue;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid rgb(69, 69, 69);
+            outline: none;
+            font-size: 15px;
+            transition: all 0.1s;
+        }
+
+        .input:hover{
+            border: 1px solid rgb(0, 81, 255);
+            color: rgb(0, 98, 255);
+        }
+
+        p{
+            font-size: 11px;
+            margin-left: 10%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #btn{
+            width: 80%;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 10%;
+            background-color: rgb(0, 23, 234);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        #btn:focus{
+            background-color: rgb(0, 115, 255);
+            color: black;
+        }
+
+        #cbText{
+            font-size: 11px;
+            margin-left: 10%;
+
+        }
+
+        @media screen and (max-width: 425px) {
+            h2{
+            margin-top: -148px;
+            margin-left: 121px;
+            font-weight: 900;
+            display: flex;
+            z-index: 1;
+        }
+        #slogan{
+            font-size: 10px;
+            margin-top: -10px;
+            margin-left: 120px;
+        }
+            
+        }
+
+    </style>
+</head>
+<body>
+<img src="image/20231213_130057.png" tabindex="1" alt="image there are some students and writers">
+<h2 tabindex="2">One Vision</h2>
+<p id="slogan" tabindex="3">परोपकारार्थमिदं शरीरम्|</p>
+<div class="containor">
+    <p id="login" tabindex="4">Login</h>
+
+    <form action="index.php" method="get">
+        <input type="text" class="input" tabindex="5" id="UserName" placeholder="Enter Your Username">
+        <input type="password" class="input" tabindex="6" id="Password" placeholder="Make Your Password">
+        <input type="password" class="input" tabindex="7" id="Password" placeholder="Conform Your Password">
+
+         <label for="psdShow" id="cbText" tabindex="8">Check the checkbox, To show the password. </label> 
+             <input type="checkbox" tabindex="9" id="showPassword"  onchange="togglePassword()" aria-label="Show Password">         
+        <input type="button" id="btn" tabindex="11" value="SUBMIT" onclick="validate()" >
+     </form>
+</div>
+
+
+<script>
+function validate() {
+    var input = document.getElementsByClassName('input');
+    let i = 0;
+    var a = 0;
+    while (i <= input.length ) {
+
+        if (input[i].value === null || input[i].value === '') {
+            console.log(i, input.length, input[i].id);
+            input[i].style.border = '1px solid red ';
+            input[i].placeholder = 'Please Enter A ' + input[i].id;
+            input[i].focus();
+            a--;
+            break;
+        } else {
+            input[i].style.border = '1px solid rgb(69, 69, 69)';
+            console.log( input[i].id + ' Feilds Are Filled...' + a + i);                
+            a++;
+            i++;
+            if (i == input.length && a == i){
+                window.location.href = 'register.html';
+            }
+
+          
+        };
+    }
+
+
+    
+};
+
+function togglePassword() {
+    let input = document.getElementById('Password');
+    let checkbox = document.getElementById('showPassword');
+    let txt = document.getElementById('cbText');
+
+    if (checkbox.checked){
+        input.type = 'text';
+        checkbox.setAttribute('aria-label', 'Hide Password');
+        txt.textContent = 'Uncheck the checkbox, To hide the password.';
+        input.focus();
+    } else {
+        input.type = 'password';
+        checkbox.setAttribute('aria-label', 'Show Password');
+        txt.textContent = 'Check the checkbox, To show the password.';
+        input.focus();
+    }
+
+};
+</script>
+</body>
+</html>

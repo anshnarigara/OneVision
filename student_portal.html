@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #logo{
+        margin-left: calc(50% - 25px);
+        margin-bottom: -10px;
+        width: 50px;
+        height: 60px;
+    }
+
+    #stdphoto{
+        height: 30px;
+        width: 30px;
+        margin-left: 1%;
+        border-radius: 30px;
+        border: 3px solid #600B0D;
+    }
+    .info{
+        background-color: #F79D7C;
+        border-radius: 10px;
+        margin-top: -40px;
+        margin-left: 1%;
+        width: 98%;
+    }
+
+    .info h3{
+        background-color: #600B0D;
+        color: white;
+        padding-left: 40px;
+        border-top-right-radius: 10px ;
+    }
+
+    #edtbtn{
+        border: none;
+        padding: 5px;
+        background-color: darkgreen;
+        color: white;
+    }
+
+    #dltbtn{
+        border: none;
+        padding: 5px;
+        background-color: darkred;
+        color: white;
+    }
+
+    #aplbtn{
+        color: white;
+        background-color: #01387C;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        width: 98%;
+        margin-left: 1%;
+    }
+
+    #edtprflbtn{
+        color: white;
+        background-color: #B1296B;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: -5px;
+        width: 98%;
+        margin-left: 1%;
+    }
+
+    #soutbtn{
+        color: white;
+        background-color: #981307;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        width: 98%;
+        margin-left: 1%;
+    }
+
+    #status{
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+<body>
+    <img src="image/logi.jpeg"  alt="Onevision Logo and slogan परोपकारार्थमिदं शरीरम्|" id="logo" tabindex="2">
+    <hr>
+    <img src="image/stinfo.png" alt="student photo" id="stdphoto">
+    <div class="info">
+        <h3>SDTUDENT NAME</h3>
+        <table style="margin-top: -15px;padding: 10px;">
+            <tr>
+                <td style="width: 60%;">EXAM NAME:</td>
+                <td>B. A. INTERNEL</td>
+            </tr>
+            <tr>
+                <td>EXAM START DATE:-</td>
+                <td>00-00-0000</td>
+            </tr>
+            <tr>
+                <td>EXAM TIME    :-</td>
+                <td>0:00 TO 0:00</td>
+            </tr>
+            <tr>
+                <td>EXAM END DATE:-</td>
+                <td>00-00-0000</td>
+            </tr>
+            <tr>
+                <td>LOCATION     :-</td>
+                <td>ABC COLLEGE, LAL DARWAJA</td>
+            </tr>
+            <tr>
+                <td>MY CONTACT</td>
+                <td>1234567890</td>
+            </tr>
+            <tr>
+                <td>WRITER STATUS</td>
+                <td id="status">NOT ALLOCATED</td>
+            </tr>
+            <tr>
+                <td>WRITER NaME</td>
+                <td>ABC</td>
+            </tr>
+            <tr>
+                <td>WRITER CONTACT</td>
+                <td>0987654321</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-left: 30%;">
+                    <input type="submit" value="EDIT" id="edtbtn">
+                    <input type="button" value="DELETE" id="dltbtn">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div><br>
+    <input type="button" value="APPLY FOR WRITER" id="aplbtn"><br><br>
+    <input type="button" value="EDIT YOUR PROFILE" id="edtprflbtn"><br><br>
+    <input type="button" value="SIGN OUT" id="soutbtn"><br><br>
+</body>
+</html>

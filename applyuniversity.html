@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #logo{
+        margin-left: calc(50% - 25px);
+        margin-bottom: -10px;
+        width: 50px;
+        height: 60px;
+    }
+
+    #form{
+        background-color: #F79D7C;
+        border-radius: 10px;
+        margin-top: -40px;
+        margin-left: 1%;
+        width: 98%;
+    }
+
+  
+
+    .containor{
+        background-color: #7bc8ff;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    .containor h3, #pprdiv h4{
+        color: white;
+        background-color: #01387C;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 5px;
+    }
+
+    table{
+        width: 100%;
+        padding: 5px;
+    }
+
+    select{
+        width: calc(100% - 5px);
+        background-color: #0668e0;
+        padding: 5px;
+        color: white;
+        border: none;
+    }
+
+    .containor input, #pprdiv input {
+        color: white;
+        background-color: #0668e0;
+        width: calc(100% - 15px);
+        padding: 5px;
+        border: none;
+    }
+
+    .containor input:hover, #pprdiv input:hover{
+        border: none;
+        outline: none;
+    }
+    .containor input::placeholder, #pprdiv input::placeholder{
+        color: white;
+    }
+    #btn{
+        background-color: #01387C;
+        border: 2px solid black;
+        padding: 10px;
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    #sbmt{
+        background-color: #01387C;
+        border: 2px solid black;
+        padding: 10px;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    #pprdiv{
+        background-color: #7bc8ff;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #PPImage{
+        margin-bottom: 5px;
+        margin-left: 8%;
+        padding-left: 2%;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    #PPImage::file-selector-button{
+        background-color: dodgerblue;
+        color: white;
+        border: 3px solid white;
+        border-radius: 50px;
+        text-align: center;
+        padding-bottom: 2px;
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+    <img src="image/logi.jpeg"  alt="Onevision Logo and slogan परोपकारार्थमिदं शरीरम्|" id="logo" tabindex="1">
+    <hr>
+
+    <div class="containor">
+        <h3 tabindex="2">ENTER YOUR BELLOW DETAILS </h3>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td tabindex="3">YOUR NAME</td>
+                </tr>
+                <tr>
+                    <td tabindex="4">STUDENNT NAME</td>
+                </tr>
+                <tr>
+                    <td tabindex="5">EXAM NAME</td>
+                </tr>
+                <tr>
+                    <td tabindex="6">UNIVERSITY</td>
+
+                </tr>
+                <tr>
+                    <td tabindex="7">COURSE</td>
+                </tr>
+                <tr>
+                    <td><select tabindex="8" name="select" id="">
+                        <option value="">CHOUSE YOUR COURSE</option>
+                        <option value="">B. A.</option>
+                        <option value="">B. ED.</option>
+                        <option value="">BCA</option>
+                        <option value="">B. COM.</option>
+                        <option value="">LLB</option>
+                        <option value="">M. A.</option>
+                        <option value="">M. ED.</option>
+                        <option value="">M. COM.</option>
+                        <option value="">PHD</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td tabindex="9">EXAM STARTING DATE</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="10" type="date"></td>
+
+                </tr>
+                <tr>
+                    <td tabindex="11">EXAM END DATE</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="12" type="date"></td>
+
+                </tr>
+                <tr>
+                    <td tabindex="13">WRITER REQURMENT</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="14" type="text" placeholder="Enter your writer requarments"></td>
+                </tr>
+                <tr>
+                    <td tabindex="15">EXAM LOCATION</td>
+                </tr>
+                <tr>
+                    <td ><select tabindex="16" name="select" id="">
+                        <option value="CHOSE THE COLLAGE">CHOSE YOUR CENTER</option>
+                        <option value="">AHMEDABAD ARTS AND COMERCE COLLEGE</option>
+                        <option value="">ALT TRAINING COLLEGE FOUNDATION</option>
+                        <option value="">AROMA COLLEGE</option>
+                        <option value="">BHAVAN`S R. A. OF ARTS AND COMMERCE COLLEGE</option>
+                        <option value="">C. U. SHAH ARTS COLLEGE</option>
+                        <option value="">C. U. SHAH COMMERCE COLLEGE</option>
+                        <option value="">GLS COLLEGE FOR GIRLS</option>
+                        <option value="">GUJARAT COMMERCE COLLEGE</option>
+                        <option value="">GUJARAT UNIVERSITY CAMPUS</option>
+                        <option value="">H. K. ARTS COLLEGE</option>
+                        <option value="">H. L. COMMERCE COLLEGE</option>
+                        <option value="">H. R. MAHETA ARTS COLLEGE</option>
+                        <option value="">L. D. ARTS COLLEGE</option>
+                        <option value="">L. C. M. ARTS COLLEGE</option>
+                        <option value="">P. D. PANDYA MAHILA COMMERCE COLLEGE</option>
+                        <option value="">M. B. PATEL RASHTRABHASHA VINAYAN BHAVAN</option>
+                        <option value="">N. M. ZALA COLLEGE</option>
+                        <option value="">NAVGUJARAT CAMPUS</option>
+                        <option value="">PRESIDENT SCINCE COLLEGE</option>
+                        <option value="">R. C. COLLEGE OF COMMERCE</option>
+                        <option value="">R. D. SHAH ARTS COLLEGE</option>
+                        <option value="">R. H. PATEL COLLEGE</option>
+                        <option value="">R. J. TIBERWAL COMMERCE COLLEGE</option>
+                        <option value="">S. R. MEHTA ARTS COLLEGE</option>
+                        <option value="">SETH C. N. COLLEGE</option>
+                        <option value="">SHREE NARAYAN COLLEGE OF COMMERCE</option>
+                        <option value="">SILVER OAK COLLEGE OF COMPUTER APPLICATION</option>
+                        <option value="">SOMLALIT COLLEGE</option>
+                        <option value="">ST. XAVIERS COLLEGE</option>
+                        <option value="">SWAMINARAYAN COLLEGE</option>
+                        <option value="">UMIYA ARTS AND COMMERCE COLLEGE</option>
+                        <option value="">UMIYA EDUCATION COLLEGE</option>
+                        <option value="">VIVEKANAND COLLEGE OF COMMERCE</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>UPLOAD YOUR HALL TICKET</td>
+                </tr>
+                <tr>
+                    <td><input type="file" tabindex="17" name="PPImage" id="PPImage"></td>
+                </tr>
+                <tr>
+                    <td tabindex="18">PAPERS</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="19" type="number" name="" id="pprnum" placeholder="Enter number of pappers you have."></td>
+
+                </tr>
+                <tr>
+                    <td><input tabindex="20" type="button" href="#" onclick="load()"  value="GENERATE THE PAPPERS" id="btn"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+ 
+</body>
+<script>
+    function load() {
+        let value = document.getElementById('pprnum').value;
+        
+        if (value > 0 && value < 10) {
+            for (i = 1; i <= value; i++) {
+                let element = document.createElement('div');
+                element.id = 'pprdiv';
+                element.innerHTML= '   <h4>PAPPER ' + i + '</h4><form action="" method="post"><table><tr><td><input type="text" placeholder="Enter Subject"></td></tr><tr><td><input type="text" placeholder="Enter your Language of papper"></td></tr><tr><td><p>Enter your date of papper</p></td></tr><tr><td><input type="date"></td></tr><tr><td><p>Enter your starting time</p></td></tr><tr><td><input type="time"></td></tr></table></form>';
+                document.body.appendChild(element);
+            }
+            let btn = document.createElement('input');
+            btn.type = 'submit';
+            btn.id='sbmt';
+            btn.value= 'SUBMIT';
+            // innerHTML='<input type:"submit" id="sbmt" value="SUBMIT">';
+            document.body.appendChild(btn);
+        }
+    };
+
+    function validate() {
+    var input = document.getElementsByClassName('input');
+    const phone = document.getElementById('Mobile').value;
+    const numPhone = phone.replace(/\D/g, '');
+
+            if (numPhone.length === 10) {
+                console.log('number have 10 digit' + numPhone.length);
+            } else {
+                console.log('number doesn`t have 10 digit' + numPhone.length);
+                phone.style.border = '2px solid red';
+                phone = null;
+                phone.placeholder = 'Entered phone number is unvalid, Please enter a 10 digit phone number';
+                phone.focus();      
+            }
+
+    let i = 0;
+    var a = 0;
+    while (i <= input.length ) {
+
+        if (input[i].value === null || input[i].value === '') {
+            input[i].style.border = '1.2px solid red ';
+            input[i].placeholder = 'Please Enter A ' + input[i].id;
+            input[i].focus();
+            a--;
+            break;
+        } else {
+            input[i].style.border = '1px solid rgb(69, 69, 69)';
+            a++;
+            i++;
+            if (i == input.length && a == i){
+                window.location.href = 'register.html';
+            }
+        };
+    }
+};
+</script>
+</html>

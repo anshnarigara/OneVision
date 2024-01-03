@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #logo{
+        margin-left: calc(50% - 25px);
+        margin-bottom: -10px;
+        width: 50px;
+        height: 60px;
+    }
+
+    #form{
+        background-color: #F79D7C;
+        border-radius: 10px;
+        margin-top: -40px;
+        margin-left: 1%;
+        width: 98%;
+    }
+
+  
+
+    .containor{
+        background-color: #7bc8ff;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    .containor h3, #pprdiv h4{
+        color: white;
+        background-color: #01387C;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 5px;
+    }
+
+    table{
+        width: 100%;
+        padding: 5px;
+    }
+
+    select{
+        width: calc(100% - 5px);
+        background-color: #0668e0;
+        padding: 5px;
+        color: white;
+        border: none;
+    }
+
+    .containor input, #pprdiv input {
+        color: white;
+        background-color: #0668e0;
+        width: calc(100% - 15px);
+        padding: 5px;
+        border: none;
+    }
+
+    .containor input:hover, #pprdiv input:hover{
+        border: none;
+        outline: none;
+    }
+    .containor input::placeholder, #pprdiv input::placeholder{
+        color: white;
+    }
+    #btn{
+        background-color: #01387C;
+        border: 2px solid black;
+        padding: 10px;
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    #sbmt{
+        background-color: #01387C;
+        border: 2px solid black;
+        padding: 10px;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    #pprdiv{
+        background-color: #7bc8ff;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #PPImage{
+        margin-bottom: 5px;
+        margin-left: 8%;
+        padding-left: 2%;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    #PPImage::file-selector-button{
+        background-color: dodgerblue;
+        color: white;
+        border: 3px solid white;
+        border-radius: 50px;
+        text-align: center;
+        padding-bottom: 2px;
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+    <img src="image/logi.jpeg"  alt="Onevision Logo and slogan परोपकारार्थमिदं शरीरम्|" id="logo" tabindex="1">
+    <hr>
+
+    <div class="containor">
+        <h3 tabindex="2">ENTER YOUR BELLOW DETAILS </h3>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td tabindex="3">YOUR NAME</td>
+                </tr>
+                <tr>
+                    <td tabindex="4">STUDENNT NAME</td>
+                </tr>
+                <tr>
+                    <td tabindex="5">EXAM NAME</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="" id="" tabindex="6"></td>
+                </tr>
+                <tr>
+                    <td tabindex="7">LANGUAGE</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="8" type="text"></td>
+                </tr>
+                <tr>
+                    <td tabindex="9">EXAM DATE</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="10" type="date"></td>
+                </tr>
+                <tr>
+                    <td tabindex="11">TIMING</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="12" type="time"></td>
+                </tr>
+                <tr>
+                    <td tabindex="13">WRITER REQURMENT</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="14" type="text" placeholder="Enter your writer requarments"></td>
+                </tr>
+                <tr>
+                    <td tabindex="15">EXAM LOCATION</td>
+                </tr>
+                <tr>
+                    <td><input tabindex="16" type="text"></td>
+                </tr>
+                <tr>
+                    <td tabindex="17">UPLOAD YOUR CALL LATTER</td>
+                </tr>
+                <tr>
+                    <td><input type="file" tabindex="18" name="PPImage" id="PPImage"></td>
+                </tr>
+ 
+                <tr>
+                    <td><input tabindex="19" type="submit" href="#"   value="SUBMIT" id="btn"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+ 
+</body>
+<script>
+ 
+    function validate() {
+    var input = document.getElementsByClassName('input');
+    const phone = document.getElementById('Mobile').value;
+    const numPhone = phone.replace(/\D/g, '');
+
+            if (numPhone.length === 10) {
+                console.log('number have 10 digit' + numPhone.length);
+            } else {
+                console.log('number doesn`t have 10 digit' + numPhone.length);
+                phone.style.border = '2px solid red';
+                phone = null;
+                phone.placeholder = 'Entered phone number is unvalid, Please enter a 10 digit phone number';
+                phone.focus();      
+            }
+
+    let i = 0;
+    var a = 0;
+    while (i <= input.length ) {
+
+        if (input[i].value === null || input[i].value === '') {
+            input[i].style.border = '1.2px solid red ';
+            input[i].placeholder = 'Please Enter A ' + input[i].id;
+            input[i].focus();
+            a--;
+            break;
+        } else {
+            input[i].style.border = '1px solid rgb(69, 69, 69)';
+            a++;
+            i++;
+            if (i == input.length && a == i){
+                window.location.href = 'register.html';
+            }
+        };
+    }
+};
+</script>
+</html>
